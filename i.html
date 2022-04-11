@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaji Karyawan</title>
+</head>
+<body>
+    <h1>Gaji Karyawan</h1>
+    <script>
+        var golongan, status;
+        var pajak, tunjangan, gapok, gaji;
+
+        gapok = 0;
+        pajak = 0;
+        tunjangan = 0;
+        gaji = 0;
+        total = 0;
+
+        golongan = prompt("Masukan golongan (pilih antara 1,2,dan 3): ");
+        status = prompt("Apakah Anda Berkeluarga (pilih antar Berkeluarga atau Tidak):");
+
+        if(golongan = 1) {
+            gapok = 500000;
+        }else{
+            if(golongan = 2) {
+                gapok = 750000;
+            }else {
+                if(golongan = 3) {
+                    gapok = 900000;
+                }
+            }
+        }
+
+        if(status = "Berkeluarga"){
+            tunjangan = 500000;
+        }else{
+            if(status = "Tidak"){
+                tunjangan = 0;
+            }
+        }
+
+        pajak = (gapok + tunjangan) * 0.1;
+        total = (gapok + tunjangan) - pajak;
+        gaji = total;
+
+        document.write("Golongan : " + golongan);
+        document.write("<br>Gaji Pokok : " + gapok);
+        document.write("<br>Status : " + status);
+        document.write("<br>Tunjangan : " + tunjangan);
+        document.write("<br>Pajak : " + pajak);
+        document.write("<br>Total Keseluruhan : " + total);
+        document.write("<br>Gaji : " + gaji);
+    </script>
+</body>
+</html>
